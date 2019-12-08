@@ -1,5 +1,7 @@
 <template>
-  <router-link :to="`/friends/${id}`">{{ name }}</router-link>
+  <router-link :to="{ name: 'friendDetails', params: { friendId: id } }">
+    {{ name }}
+  </router-link>
 </template>
 
 <script>

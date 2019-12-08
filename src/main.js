@@ -21,6 +21,7 @@ const routes = [
   {
     path: '/profile',
     component: Profile,
+    redirect: '/profile/info',
     children: [
       {
         path: 'info',
@@ -38,7 +39,9 @@ const routes = [
   },
   {
     path: '/friends/:friendId',
-    component: FriendDetails
+    name: 'friendDetails',
+    component: FriendDetails,
+    props: true
   },
   {
     path: '*',

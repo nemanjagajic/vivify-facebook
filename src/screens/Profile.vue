@@ -10,7 +10,13 @@
 
 <script>
   export default {
-    name: "Profile"
+    name: "Profile",
+    beforeRouteEnter(to, from, next) {
+      console.log('checking if user is authenticated...')
+      setTimeout(() => {
+        next()
+      }, 1000)
+    }
   }
 </script>
 
